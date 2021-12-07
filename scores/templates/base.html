@@ -33,5 +33,17 @@
         {% endblock %}
     </div>
     
+    <script>
+        document.body.addEventListener('htmx:beforeRequest', function(evt) {
+            const body = document.getElementsByTagName('main')[0]
+            body.style.opacity = 0.25
+        });
+
+        document.body.addEventListener('htmx:afterRequest', function(evt) {
+            const body = document.getElementsByTagName('main')[0]
+            body.style.opacity = 1.0
+        });
+    </script>
+
 </body>
 </html>

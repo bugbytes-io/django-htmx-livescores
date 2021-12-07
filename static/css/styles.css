@@ -1,0 +1,7 @@
+.indicator-style {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -50px;
+    margin-top: -50px;
+}

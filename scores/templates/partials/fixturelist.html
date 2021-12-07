@@ -1,0 +1,19 @@
+<div id="fixture-list">
+    {% for fixture in fixtures %}
+        <div class="fixture row">
+            <div class="home col-6 text-right p-0">
+                <span class="font-weight-bold">{{ fixture.home_team }}</span>
+                <span class="border px-2 py-1 bg-warning">{{ fixture.home_goals }}</span>
+            </div>
+            
+            <div class="away col-6 text-left p-0">
+                <span class="border px-2 py-1 bg-warning text-left">{{ fixture.away_goals }}</span>
+                <span class="font-weight-bold">{{ fixture.away_team }}</span>
+            </div>
+        </div>
+        {% if fixture.game_finished %}
+            <div class="text-center mt-1 text-success">FT</div>
+        {% endif %}
+        <hr/>
+    {% endfor %}
+</div>
